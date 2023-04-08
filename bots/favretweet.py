@@ -1,5 +1,5 @@
-# Filter twitters which contain "Kanye" or "Yeezy", marking them as liked and retweeted
-
+# Filter tweets which contain "EarlSweatshirt" or "EarlyMan", marking them as liked and retweeted
+# I was going to use "Kanye" and "Yeezy" but I don't want the API spammed
 
 import tweepy
 import logging
@@ -44,6 +44,6 @@ def main(keywords):
     stream.filter(track=keywords, languages=["en"])
 
 if __name__ == "__main__":
-    main(["Kanye","Yeezy"])
+    main(["EarlSweatshirt","EarlyMan"])
 
     
