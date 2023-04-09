@@ -6,14 +6,11 @@ import os
 logger = logging.getLogger()
 
 
-
-
-
 def create_api():
-    consumer_key = os.getenv("CONSUMER_KEY")
-    consumer_secret = os.getenv("CONSUMER_SECRET")
-    access_token = os.getenv("ACCESS_TOKEN")
-    access_token_secret = os.getenv("ACCESS_TOKEN_SECRET")
+    consumer_key = os.getenv("0ElAfZrI0s6GlHXGHqKi4mP0V")
+    consumer_secret = os.getenv("olKWkiq8uZhCChuOIIGnKE9pH5BKGWDgOzJgrWT40zrgSw2m7f")
+    access_token = os.getenv("1615505220938727425-xKRD0MBWWkXjMe2uJMRLDx0rGJdNz8")
+    access_token_secret = os.getenv("ocnGuSImT8i1m9rmyk5gcPGd0XKNY9KPXsmm08IsMOIRl")
 
     auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
     auth.set_access_token(access_token, access_token_secret)
@@ -26,3 +23,6 @@ def create_api():
         raise e
     logger.info("API created")
     return api
+
+
+# docker run -it -e CONSUMER_KEY="0ElAfZrI0s6GlHXGHqKi4mP0V" \ -e CONSUMER_SECRET="olKWkiq8uZhCChuOIIGnKE9pH5BKGWDgOzJgrWT40zrgSw2m7f" \ -e ACCESS_TOKEN="1615505220938727425-xKRD0MBWWkXjMe2uJMRLDx0rGJdNz82" \ -e ACCESS_TOKEN_SECRET="ocnGuSImT8i1m9rmyk5gcPGd0XKNY9KPXsmm08IsMOIRl" \ fav-retweet-bot
