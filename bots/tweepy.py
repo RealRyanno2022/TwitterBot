@@ -24,6 +24,8 @@ import logging
 
 logger = logging.getLogger()
 
+# Use getenv to read env variables and creates Tweepy auth API object
+
 def create_api():
     consumer_key = os.getenv("CONSUMER_KEY")
     consumer_secret = os.getenv("CONSUMER_SECRET")
@@ -45,16 +47,25 @@ def create_api():
 
 
 
+
+
+
+
+
+
+
+
+
 # Authenticate to Twitter
-auth = tweepy.OAuthHandler("pGBDoAaEpkliVKBOLwjtcmHGc", 
-    "xF3g1wrP50b6BlZEd20u4oVfjgH1FGQcuWUzlQO5aUWOufvlhw")
-auth.set_access_token("622518493-6VcLIPprbQbv9wkcBBPvCle8vsjU9fE85Dq9oStl", 
-    "tH9aKQbQQ1iRdYTcLSsPwitl44BkAc6jilrsU0ifnXvZhq")
+# auth = tweepy.OAuthHandler("pGBDoAaEpkliVKBOLwjtcmHGc", 
+#     "xF3g1wrP50b6BlZEd20u4oVfjgH1FGQcuWUzlQO5aUWOufvlhw")
+# auth.set_access_token("622518493-6VcLIPprbQbv9wkcBBPvCle8vsjU9fE85Dq9oStl", 
+#     "tH9aKQbQQ1iRdYTcLSsPwitl44BkAc6jilrsU0ifnXvZhq")
 
-api = tweepy.API(auth)
+# api = tweepy.API(auth)
 
-try:
-    api.verify_credentials()
-    print("Authentication OK")
-except:
-    print("Error during authentication")
+# try:
+#     api.verify_credentials()
+#     print("Authentication OK")
+# except:
+#     print("Error during authentication")
